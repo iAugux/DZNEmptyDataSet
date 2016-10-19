@@ -1034,6 +1034,10 @@ Class dzn_baseClassToSwizzleForTarget(id target)
     if ([hitView isEqual:_contentView] || [hitView isEqual:_customView]) {
         return hitView;
     }
+
+    if ([hitView isEqual:self]) {
+        return hitView;
+    }
     
     return nil;
 }
